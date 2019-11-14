@@ -31,6 +31,10 @@
         .search {
             margin-left: 100px;
         }
+
+        .message {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -39,11 +43,16 @@
         <label for="search-box"><img alt="logo" src="/img/logo.svg" class="img" /></label>
     </div>
     <div class="search">
+        @if($message)
+            <div class="message">
+                <b>{{$message}}</b>
+            </div>
+        @endif
+
         <form method="post" action="/search">
             {{csrf_field()}}
             <input id="search-box" name="query" type="text" placeholder="search term" />
             <button type="submit">Search for Artists</button>
-
         </form>
     </div>
 </div>

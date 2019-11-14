@@ -11,5 +11,9 @@
 |
 */
 
+
+// Not a huge fan of the home page being rendered by a search controller.
+// I would like to see a home controller return the exact same view for the sake of keeping organized.
 Route::get('/', "SearchController@index");
+
 Route::post('/search', "SearchController@search");

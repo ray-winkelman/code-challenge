@@ -16,6 +16,9 @@ class SearchController extends Controller
     {
         $query = $request->get('query');
 
+        if($query == null)
+            return view('index', ['message' => 'Please provide a search term.']);
+
         return view('search', ['searchTerm' => $query]);
     }
 }
