@@ -16,4 +16,8 @@
 // I would like to see a home controller return the exact same view for the sake of keeping organized.
 Route::get('/', "SearchController@index");
 
+Route::post('/searchSpotify', "SearchController@searchSpotify");
+
 Route::post('/search', "SearchController@search");
+
+Route::get('/searchCallback', "SearchController@searchCallback");

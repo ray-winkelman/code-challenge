@@ -43,7 +43,7 @@
         <label for="search-box"><img alt="logo" src="/img/logo.svg" class="img" /></label>
     </div>
     <div class="search">
-        @if($message)
+        @if(isset($message))
             <div class="message">
                 <b>{{$message}}</b>
             </div>
